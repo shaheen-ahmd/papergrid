@@ -1,0 +1,168 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    padding-top: 130px;
+}
+
+.top-bar {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+}
+.navbar {
+    position: fixed;
+    top: 32px;
+    left: 0;
+    right: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    padding: 18px 40px;
+    z-index: 1001;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: 40px;
+}
+.nav-links a {
+    color: #fff; 
+    text-decoration: none;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px; 
+    text-decoration-thickness: 1px;
+}
+.nav-links a.active {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1px;
+}
+
+
+.nav-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+.nav-icons i {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-icons i:hover {
+    opacity: 0.7; 
+    transform: scale(1.1); 
+}
+.products {
+    padding: 60px 40px;
+    background-color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; 
+}
+
+.product-card {
+    background-color: #f7f7f7; 
+    aspect-ratio: 1 / 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-card img {
+    width: 85%; 
+    height: auto;
+    object-fit: contain; 
+    transition: transform 0.5s ease; 
+}
+
+.founder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 60px;
+    align-items: center;
+}
+
+.founder-image img {
+    width: 100%;
+    max-width: 420px;
+}
+
+.btn {
+    padding: 14px 30px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.footer {
+    background: #0d0d0d;
+    color: #fff;
+    text-align: center;
+    padding: 80px 40px 30px;
+}
+
+.footer a {
+    display: block;
+    color: grey;
+    margin: 10px 0;
+}
+
+.insta {
+    width: 28px;
+    margin: 20px auto 0;
+    display: block;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 110px;
+    }
+
+    .navbar {
+        top: 40px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
